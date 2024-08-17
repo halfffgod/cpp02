@@ -12,13 +12,13 @@ public:
 	Fixed();
 	Fixed(const int nb);
 	Fixed(const float num);
-	//Fixed(const Fixed &a);
+	Fixed(const Fixed &a);
 	~Fixed();
-	//float toFloat( void ) const;
-	//int toInt( void ) const;
-	//Fixed & operator = (const Fixed &a);
-	//int		getRawBits( void ) const;
-	//void	setRawBits( int const raw );
+	float toFloat( void ) const;
+	int toInt( void ) const;
+	Fixed & operator = (const Fixed &a);
+	int		getRawBits( void ) const;
+	void	setRawBits( int const raw );
 };
 
 #endif

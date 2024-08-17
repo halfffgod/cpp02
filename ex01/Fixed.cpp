@@ -20,12 +20,33 @@ Fixed::Fixed(const float num)
 	std::cout << "Float constructor called" << std::endl;
 	//nb = nb/256;
 }
+int Fixed::getRawBits()const
+{
+	std::cout << "getRawBits member function called " << std::endl;
+	return(this->fixed_nb);
+}
+void Fixed::setRawBits(int const raw)
+{
+	this->fixed_nb = raw;
+}
+Fixed& Fixed::operator=(const Fixed& a)
+{
+    std::cout << "Copy assignment operator called " << std::endl;
+    if (this != &a){
+        fixed_nb = a.getRawBits();
+    }
+    return(*this);
+}
 
-// Fixed& Fixed::operator=(const Fixed& a)
-// {
-//     std::cout << "Copy assignment operator called " << std::endl;
-//     return(*this);
-// }
+float Fixed::toFloat( void ) const
+{
+
+}
+
+int Fixed::toInt( void ) const
+{
+	
+}
 
 Fixed::Fixed(const Fixed &a)
 {
