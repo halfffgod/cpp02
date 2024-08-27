@@ -4,7 +4,8 @@
 #include <iostream>
 #include <cmath>
 
-class Fixed{
+class Fixed
+{
 
     private: 
         int fixed_nb;
